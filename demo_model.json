@@ -1,0 +1,71 @@
+{
+    "tables": [
+        {
+            "tablename": "property_assessment_map",
+            "column_list": [
+                {
+                    "fieldname": "Pan",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Pan_Int",
+                    "type": "BIGINT"
+                },
+                {
+                    "fieldname": "Location",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Descript",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "TA_Code",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "TA_Desc",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Assess_Yr",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Assess_Val",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Trans_Date",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Sale_Val",
+                    "type": "BIGINT"
+                },
+                {
+                    "fieldname": "Tax_Levy",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Tax_Levy_P",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "Shape_Leng",
+                    "type": "DOUBLE"
+                },
+                {
+                    "fieldname": "Shape_Area",
+                    "type": "DOUBLE"
+                },
+                {
+                    "fieldname": "geometry",
+                    "type": "VARCHAR"
+                }
+            ],
+            "row_count": "479660"
+        }
+    ],
+    "udf": []
+}
