@@ -165,7 +165,11 @@ class CalcitePlanner:
             col_with_dtype = []
             for col in col_names:
                 _type = str(df[col].dtype)
-                calcite_dtype = self.calcite_dtype[_type]
+                if _type.startswith('datetime64'):
+                    calcite_dtype = 'TIMESTAMP'
+                else:
+                    calcite_dtype = self.calcite_dtype.get(_type, 'VARCHAR')  # fallback to VARCHAR for unknown types
+                # calcite_dtype = self.calcite_dtype[_type]
                 single_col_info = {}
                 single_col_info['fieldname'] = col
                 single_col_info['type'] = calcite_dtype 
