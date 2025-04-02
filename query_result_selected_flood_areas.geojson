@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "query_result_selected_flood_areas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2953" } },
+"features": [
+
+]
+}

@@ -1,46 +1,126 @@
 {
     "tables": [
         {
-            "tablename": "buildings",
+            "tablename": "address_new_brunswick",
             "column_list": [
                 {
-                    "fieldname": "OBJECTID",
+                    "fieldname": "CIV_ID",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ADDR_SYM",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ADDR_DESC",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "CIVIC_NUM",
                     "type": "BIGINT"
                 },
                 {
-                    "fieldname": "source",
+                    "fieldname": "NUM_SUFFIX",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "min_g_elev",
+                    "fieldname": "PID",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "STREET",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ST_TYPE_E",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ST_TYPE_F",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "RD_SIDE_E",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "RD_SIDE_F",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ST_DIR_E",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ST_DIR_F",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "COMMUNITY",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "COUNTY",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ADD_TYPE_E",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ADD_TYPE_F",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "DESCRIPT",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "STRUCT_E",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "STRUCT_F",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "STRU_NAME",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "ALT_ACCESS",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "COLL_MTHD",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "CREATED",
+                    "type": "TIMESTAMP"
+                },
+                {
+                    "fieldname": "MODIFIED",
+                    "type": "TIMESTAMP"
+                },
+                {
+                    "fieldname": "LATITUDE",
                     "type": "DOUBLE"
                 },
                 {
-                    "fieldname": "date_creat",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "date_last_",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "max_b_elev",
+                    "fieldname": "LONGITUDE",
                     "type": "DOUBLE"
                 },
                 {
-                    "fieldname": "year",
+                    "fieldname": "SUB_COUNT",
                     "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "BuildingID",
-                    "type": "BIGINT"
                 },
                 {
                     "fieldname": "geometry",
                     "type": "VARCHAR"
                 }
             ],
-            "row_count": "661348"
+            "row_count": "385466"
         },
         {
             "tablename": "flood_risk_areas",
