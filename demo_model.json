@@ -1,55 +1,73 @@
 {
     "tables": [
         {
-            "tablename": "property_assessment_map",
+            "tablename": "buildings",
             "column_list": [
                 {
-                    "fieldname": "Pan",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "Pan_Int",
+                    "fieldname": "OBJECTID",
                     "type": "BIGINT"
                 },
                 {
-                    "fieldname": "Location",
+                    "fieldname": "source",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "Descript",
+                    "fieldname": "min_g_elev",
+                    "type": "DOUBLE"
+                },
+                {
+                    "fieldname": "date_creat",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "TA_Code",
+                    "fieldname": "date_last_",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "TA_Desc",
+                    "fieldname": "max_b_elev",
+                    "type": "DOUBLE"
+                },
+                {
+                    "fieldname": "year",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "Assess_Yr",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "Assess_Val",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "Trans_Date",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "Sale_Val",
+                    "fieldname": "BuildingID",
                     "type": "BIGINT"
                 },
                 {
-                    "fieldname": "Tax_Levy",
+                    "fieldname": "geometry",
+                    "type": "VARCHAR"
+                }
+            ],
+            "row_count": "661348"
+        },
+        {
+            "tablename": "flood_risk_areas",
+            "column_list": [
+                {
+                    "fieldname": "POL_KEY",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "Tax_Levy_P",
+                    "fieldname": "DESCR",
                     "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "PRED",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "SEC",
+                    "type": "VARCHAR"
+                },
+                {
+                    "fieldname": "PERIM",
+                    "type": "DOUBLE"
+                },
+                {
+                    "fieldname": "HECTA",
+                    "type": "DOUBLE"
                 },
                 {
                     "fieldname": "Shape_Leng",
@@ -64,7 +82,7 @@
                     "type": "VARCHAR"
                 }
             ],
-            "row_count": "479660"
+            "row_count": "1826"
         }
     ],
     "udf": []
