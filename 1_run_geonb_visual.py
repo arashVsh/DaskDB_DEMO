@@ -109,14 +109,11 @@ class SpatialQueryApp(QWidget):
 
         sql_dialog = QDialog(self)
         sql_dialog.setWindowTitle("Generated SQL Query")
-        sql_dialog.resize(700, 300)
-
+        sql_dialog.resize(800, 300)
         dialog_layout = QVLayout()
         text_edit = QTextEdit()
-        text_edit.setPlainText(sql_text)
+        text_edit.setPlainText(sql_text.strip())
         text_edit.setReadOnly(True)
-        text_edit.setWordWrapMode(False)
-
         dialog_layout.addWidget(text_edit)
         sql_dialog.setLayout(dialog_layout)
         sql_dialog.exec_()
