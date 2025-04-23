@@ -1,11 +1,13 @@
 from DaskDB.Context import Context
 
-property_assessment_path = '../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp'
-floodriskareas_path = '../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp'
+property_assessment_path = "../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp"
+floodriskareas_path = (
+    "../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp"
+)
 
 c = Context()
-c.register_table('property_assessment_map', property_assessment_path)
-c.register_table('flood_risk_areas', floodriskareas_path)
+c.register_table("property_assessment_map", property_assessment_path)
+c.register_table("flood_risk_areas", floodriskareas_path)
 c.initSchema()
 
 sql = """select Location, avg(sale_val) as avg_val
