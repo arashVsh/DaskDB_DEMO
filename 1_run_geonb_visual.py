@@ -15,17 +15,14 @@ from PyQt5.QtWidgets import (
     QVBoxLayout as QVLayout,
 )
 
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
+from DaskDB.Context import Context
 
-# ----------------------------
-# Load Dataset
-# ----------------------------
+property_path = "../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp"
+
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-c.register_table(
-    "property_assessment_map", "../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp"
-)
+c.register_table("property_assessment_map", property_path)
 c.initSchema()
+
 df = c.query("SELECT * FROM property_assessment_map")
 gdf = gpd.GeoDataFrame(df, geometry="geometry")
 gdf.set_crs("EPSG:2953", inplace=True)

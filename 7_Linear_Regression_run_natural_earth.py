@@ -1,16 +1,12 @@
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
+from DaskDB.Context import Context
 from Util import myLinearFit
-import os
+
+naturalearth_lowres_path = "../data/naturalearth_lowres/naturalearth_lowres.shp"
+naturalearth_cities_path = "../data/naturalearth_cities/naturalearth_cities.shp"
 
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-
-naturalearth_lowres_path = os.path.join("../data", "naturalearth_lowres", "naturalearth_lowres.shp")
 c.register_table('naturalearth_lowres', naturalearth_lowres_path)
-
-naturalearth_cities_path = os.path.join("../data", "naturalearth_cities", "naturalearth_cities.shp")
 c.register_table('naturalearth_cities', naturalearth_cities_path)
-
 c.register_udf(myLinearFit, [1,1])
 c.initSchema()
 

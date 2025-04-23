@@ -1,22 +1,16 @@
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
+from DaskDB.Context import Context
 from Util import plotBarGraph
-import os
+
+property_assessment_path = '../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp'
+floodriskareas_path = '../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp'
+building_path = '../data/geonb_buildings_shp/geonb_buildings_shp.shp'
+anb_addresses_path = '../data/geonb_anb_shp/geonb_anb_addresses.shp'
 
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-
-property_assessment_path = os.path.join('../data', 'geonb_pan-ncb_shp', 'geonb_pan_ncb.shp')
 c.register_table('property_assessment_map', property_assessment_path)
-
-floodriskareas_path = os.path.join('../data', 'geonb_floodriskareas_shp/Shapefiles', 'Flood_Hazard_Areas.shp')
 c.register_table('flood_risk_areas', floodriskareas_path)
-
-building_path = os.path.join('../data', 'geonb_buildings_shp', 'geonb_buildings_shp.shp')
 c.register_table('buildings', building_path)
-
-anb_addresses_path = os.path.join('../data', 'geonb_anb_shp', 'geonb_anb_addresses.shp')
 c.register_table('address_new_brunswick', anb_addresses_path)
-
 c.register_udf(plotBarGraph, [2])
 c.initSchema()
 

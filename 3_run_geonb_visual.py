@@ -1,8 +1,6 @@
 # spatialQueryGui_3run.py
 
 import sys
-import os
-import json
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon, box
@@ -12,20 +10,18 @@ from PyQt5.QtWidgets import (
     QTextEdit, QDialog, QVBoxLayout as QVLayout
 )
 
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
+from DaskDB.Context import Context
 
 # -----------------------------------
 # Load Dataset (3_run_geonb.py based)
 # -----------------------------------
+
+anb_addresses_path = '../data/geonb_anb_shp/geonb_anb_addresses.shp'
+floodriskareas_path = '../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp'
+
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-
-anb_addresses_path = os.path.join('../data', 'geonb_anb_shp', 'geonb_anb_addresses.shp')
 c.register_table('address_new_brunswick', anb_addresses_path)
-
-floodriskareas_path = os.path.join('../data', 'geonb_floodriskareas_shp/Shapefiles', 'Flood_Hazard_Areas.shp')
 c.register_table('flood_risk_areas', floodriskareas_path)
-
 c.initSchema()
 
 # Query for visualization bounds

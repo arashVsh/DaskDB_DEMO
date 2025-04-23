@@ -1,12 +1,8 @@
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
-import os
+from DaskDB.Context import Context
 
+property_assessment_path = '../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp'
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-
-property_assessment_path = os.path.join('../data', 'geonb_pan-ncb_shp', 'geonb_pan_ncb.shp')
 c.register_table('property_assessment_map', property_assessment_path)
-
 c.initSchema()
 
 sql = """select ST_Boundary(geometry)

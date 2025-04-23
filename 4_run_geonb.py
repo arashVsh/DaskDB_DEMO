@@ -1,15 +1,11 @@
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
-import os
+from DaskDB.Context import Context
+
+property_assessment_path = '../data/geonb_pan-ncb_shp/geonb_pan_ncb.shp'
+floodriskareas_path = '../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp'
 
 c = Context()
-c.setup_configuration(daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT)
-
-property_assessment_path = os.path.join('../data', 'geonb_pan-ncb_shp', 'geonb_pan_ncb.shp')
 c.register_table('property_assessment_map', property_assessment_path)
-
-floodriskareas_path = os.path.join('../data', 'geonb_floodriskareas_shp/Shapefiles', 'Flood_Hazard_Areas.shp')
 c.register_table('flood_risk_areas', floodriskareas_path)
-
 c.initSchema()
 
 sql = """select Location, avg(sale_val) as avg_val

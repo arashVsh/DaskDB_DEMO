@@ -1,8 +1,6 @@
 # 2_run_geonb_gui.py - Spatial Query Interface for multiple layers (Buildings + Flood Risk Areas)
 
 import sys
-import os
-import json
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon, box
@@ -18,21 +16,14 @@ from PyQt5.QtWidgets import (
     QVBoxLayout as QVLayout,
 )
 
-from DaskDB.Context import Context, DASK_SCHEDULER_IP, DASK_SCHEDULER_PORT
+from DaskDB.Context import Context
 
-# ----------------------------
-# Load Dataset
-# ----------------------------
+buildings_path = "../data/geonb_buildings_shp/geonb_buildings_shp.shp"
+flood_path = "../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp"
+
 c = Context()
-c.setup_configuration(
-    daskSchedulerIP=DASK_SCHEDULER_IP, daskSchedulerPort=DASK_SCHEDULER_PORT
-)
-
-c.register_table("buildings", "../data/geonb_buildings_shp/geonb_buildings_shp.shp")
-c.register_table(
-    "flood_risk_areas",
-    "../data/geonb_floodriskareas_shp/Shapefiles/Flood_Hazard_Areas.shp",
-)
+c.register_table("buildings", buildings_path)
+c.register_table("flood_risk_areas", flood_path)
 c.initSchema()
 
 buildings_df = c.query("SELECT * FROM buildings")
