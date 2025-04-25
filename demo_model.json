@@ -1,153 +1,55 @@
 {
     "tables": [
         {
-            "tablename": "address_new_brunswick",
+            "tablename": "property_assessment_map",
             "column_list": [
                 {
-                    "fieldname": "CIV_ID",
+                    "fieldname": "Pan",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "ADDR_SYM",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "ADDR_DESC",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "CIVIC_NUM",
+                    "fieldname": "Pan_Int",
                     "type": "BIGINT"
                 },
                 {
-                    "fieldname": "NUM_SUFFIX",
+                    "fieldname": "Location",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "PID",
+                    "fieldname": "Descript",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "STREET",
+                    "fieldname": "TA_Code",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "ST_TYPE_E",
+                    "fieldname": "TA_Desc",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "ST_TYPE_F",
+                    "fieldname": "Assess_Yr",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "RD_SIDE_E",
+                    "fieldname": "Assess_Val",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "RD_SIDE_F",
+                    "fieldname": "Trans_Date",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "ST_DIR_E",
+                    "fieldname": "Sale_Val",
+                    "type": "BIGINT"
+                },
+                {
+                    "fieldname": "Tax_Levy",
                     "type": "VARCHAR"
                 },
                 {
-                    "fieldname": "ST_DIR_F",
+                    "fieldname": "Tax_Levy_P",
                     "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "COMMUNITY",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "COUNTY",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "ADD_TYPE_E",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "ADD_TYPE_F",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "DESCRIPT",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "STRUCT_E",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "STRUCT_F",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "STRU_NAME",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "ALT_ACCESS",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "COLL_MTHD",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "CREATED",
-                    "type": "TIMESTAMP"
-                },
-                {
-                    "fieldname": "MODIFIED",
-                    "type": "TIMESTAMP"
-                },
-                {
-                    "fieldname": "LATITUDE",
-                    "type": "DOUBLE"
-                },
-                {
-                    "fieldname": "LONGITUDE",
-                    "type": "DOUBLE"
-                },
-                {
-                    "fieldname": "SUB_COUNT",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "geometry",
-                    "type": "VARCHAR"
-                }
-            ],
-            "row_count": "385466"
-        },
-        {
-            "tablename": "flood_risk_areas",
-            "column_list": [
-                {
-                    "fieldname": "POL_KEY",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "DESCR",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "PRED",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "SEC",
-                    "type": "VARCHAR"
-                },
-                {
-                    "fieldname": "PERIM",
-                    "type": "DOUBLE"
-                },
-                {
-                    "fieldname": "HECTA",
-                    "type": "DOUBLE"
                 },
                 {
                     "fieldname": "Shape_Leng",
@@ -162,7 +64,7 @@
                     "type": "VARCHAR"
                 }
             ],
-            "row_count": "1826"
+            "row_count": "479660"
         }
     ],
     "udf": []
